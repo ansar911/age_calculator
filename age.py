@@ -1,10 +1,20 @@
 from datetime import date
 
+a = int(input("enter the year:"))
+b = int(input("enter the month:"))
+c = int(input("enter the day:"))
 
-def calculate_age(birth_date):
+
+def ansar():
     today = date.today()
-    age = today.year - birth_date.year
-    # Check if they haven't had their birthday yet this year
-    if (today.month, today.day) < (birth_date.month, birth_date.day):
-        age -= 1
-    return age
+    # Correct syntax: date(year, month, day)
+    bday = date(a, b, c)
+
+    print("Today:", today)
+    print("Birthday:", bday)
+    day = (today-bday)
+    years = day.days // 365
+    print(years)
+
+
+ansar()
